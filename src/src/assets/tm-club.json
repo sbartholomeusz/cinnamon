@@ -1,0 +1,160 @@
+{
+    "clubName": "Unicorn Toastmasters",
+    "clubMeetingSchedule": "1st, 3rd Wed of every month @ 06:00pm",
+    "clubMissionStatement": "We provide a supportive and positive learning experience in which members are empowered to develop communication and leadership skills.",
+    "clubWebsiteUrl": "https://www.toastmasters.org/",
+    "clubOfficers": [
+        {
+            "roleName": "Club President",
+            "memberName": "Tom Ato"
+        }, 
+        {
+            "roleName": "VP Education",
+            "memberName": "Caesar Salad"
+        }, 
+        {
+            "roleName": "VP Membership",
+            "memberName": "Russell Sprouts"
+        }, 
+        {
+            "roleName": "VP Public Relations",
+            "memberName": "Brock Choi"
+        }, 
+        {
+            "roleName": "Secretary",
+            "memberName": "Kim Chi"
+        }, 
+        {
+            "roleName": "Treasurer",
+            "memberName": "Russell Sprouts"
+        }, 
+        {
+            "roleName": "Sergeant At Arms",
+            "memberName": "Jack Fruit"
+        }
+    ],
+    "clubMembers": [
+        {
+            "name": "Brock Choi"
+        },
+        {
+            "name": "Caesar Salad"
+        },
+        {
+            "name": "Jack Fruit"
+        },
+        {
+            "name": "Kim Chi"
+        },
+        {
+            "name": "Russell Sprouts"
+        },
+        {
+            "name": "Tom Ato"
+        }
+    ],
+    "meetingRoles": [
+        {
+            "roleName": "Sergeant-At-Arms",
+            "durationSecondsGreen": null,
+            "durationSecondsAmber": null,
+            "durationSecondsRed": 120
+        },
+        {
+            "roleName": "President's Open",
+            "durationSecondsGreen": null,
+            "durationSecondsAmber": null,
+            "durationSecondsRed": 60
+        },
+        {
+            "roleName": "Toastmaster's Introduction",
+            "durationSecondsGreen": 60,
+            "durationSecondsAmber": 90,
+            "durationSecondsRed": 120
+        },
+        {
+            "roleName": "Grammarian",
+            "durationSecondsGreen": null,
+            "durationSecondsAmber": null,
+            "durationSecondsRed": 60
+        },
+        {
+            "roleName": "Table Topics",
+            "durationSecondsGreen": 300,
+            "durationSecondsAmber": 360,
+            "durationSecondsRed": 420
+        },
+        {
+            "roleName": "Educational",
+            "durationSecondsGreen": 300,
+            "durationSecondsAmber": 360,
+            "durationSecondsRed": 420
+        },
+        {
+            "roleName": "Speech 1",
+            "durationSecondsGreen": 300,
+            "durationSecondsAmber": 360,
+            "durationSecondsRed": 420
+        },
+        {
+            "roleName": "Speech 2",
+            "durationSecondsGreen": 300,
+            "durationSecondsAmber": 360,
+            "durationSecondsRed": 420
+        },
+        {
+            "roleName": "Speech 3",
+            "durationSecondsGreen": 300,
+            "durationSecondsAmber": 360,
+            "durationSecondsRed": 420
+        },
+        {
+            "roleName": "Break",
+            "durationSecondsGreen": null,
+            "durationSecondsAmber": null,
+            "durationSecondsRed": 300
+        },
+        {
+            "roleName": "Speech 1 Evaluation",
+            "durationSecondsGreen": 120,
+            "durationSecondsAmber": 150,
+            "durationSecondsRed": 180
+        },
+        {
+            "roleName": "Speech 2 Evaluation",
+            "durationSecondsGreen": 120,
+            "durationSecondsAmber": 150,
+            "durationSecondsRed": 180
+        },
+        {
+            "roleName": "Speech 3 Evaluation",
+            "durationSecondsGreen": 120,
+            "durationSecondsAmber": 150,
+            "durationSecondsRed": 180
+        },
+        {
+            "roleName": "Grammarian's Report",
+            "durationSecondsGreen": 60,
+            "durationSecondsAmber": 90,
+            "durationSecondsRed": 120
+        },
+        {
+            "roleName": "Timing Report",
+            "durationSecondsGreen": 60,
+            "durationSecondsAmber": 90,
+            "durationSecondsRed": 120
+        },
+        {
+            "roleName": "General Evaluation",
+            "durationSecondsGreen": 300,
+            "durationSecondsAmber": 360,
+            "durationSecondsRed": 420
+        },
+        {
+            "roleName": "President's Close",
+            "durationSecondsGreen": 240,
+            "durationSecondsAmber": 300,
+            "durationSecondsRed": 360
+        }
+    ]
+}

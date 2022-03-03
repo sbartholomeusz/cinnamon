@@ -1,0 +1,49 @@
+<div class="agenda-preview-container">
+    <div class="header">
+        <p class="title">{{clubDetails.clubName}}</p>
+        <p class="subtitle">{{clubDetails.clubMeetingSchedule}}</p>
+    </div>
+
+    <div class="main-content">
+        <div class="club-information">
+            <div>
+                <p class="meeting-number">Meeting {{meetingNumber | number:'3.0-0'}}</p>
+                <p class="meeting-date">{{this.meetingDate | date:'longDate'}}</p>
+            </div>
+            <br/>
+            <div *ngFor="let officer of clubOfficers">
+                <div class="club-officer">
+                    <b>{{officer.roleName}}</b>
+                    <br/>
+                    {{officer.memberName}}
+                </div>
+            </div>
+            <div *ngIf="clubDetails.clubMissionStatement && clubDetails.clubMissionStatement.length > 0" class="club-mission-statement">
+                <b>Mission Statement:</b>
+                <br/>
+                <span class="club-mission-statement-body">{{clubDetails.clubMissionStatement}}</span>
+            </div>
+            <div>
+                <img src={{tmWebsiteQrCode}} class="qr-code" />
+            </div>
+        </div>
+        <div class="meeting-roles">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Role</th>
+                    <th>Speaker</th>
+                    <th colspan="3">Duration (sec)</th>
+                </tr>
+                <tr *ngFor="let lineItem of meetingAgenda">
+                    <td>{{lineItem.startTime | date:'mediumTime'}}</td>
+                    <td>{{lineItem.roleName}}</td>
+                    <td>{{lineItem.memberName}}</td>
+                    <td>{{lineItem.durationSecondsGreen}}</td>
+                    <td>{{lineItem.durationSecondsAmber}}</td>
+                    <td>{{lineItem.durationSecondsRed}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

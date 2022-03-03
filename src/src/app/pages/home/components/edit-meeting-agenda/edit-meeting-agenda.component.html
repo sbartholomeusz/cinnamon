@@ -1,0 +1,67 @@
+<div class="spacer"></div>
+
+<button mat-raised-button (click)="resetForm()" color="accent" matTooltip="Reset form">
+    Reset
+</button>
+&nbsp;&nbsp;
+<mat-slide-toggle [(ngModel)]="autoAssignMemberRoles">Auto Assign Members</mat-slide-toggle> 
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<form #rolesForm id="rolesForm" name="rolesForm">
+    <table>
+        <thead>
+            <tr>
+                <th class="pad-right"><mat-label>Role</mat-label></th>
+                <th><mat-label>Member</mat-label></th>
+                <th><mat-label>Green Light</mat-label></th>
+                <th><mat-label>Amber Light</mat-label></th>
+                <th><mat-label>Red Light</mat-label></th>
+                <th></th>
+                <th></th>
+            </tr>            
+        </thead>
+        <tbody cdkDropList [cdkDropListData]="meetingAgenda" (cdkDropListDropped)="onAgendaItemDropped($event)">
+            <tr *ngFor="let agendaItem of meetingAgenda; let ndx=index" cdkDrag>
+                <td class="pad-right"><label>{{agendaItem.roleName}}</label></td>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Choose an option</mat-label>
+                        <mat-select (selectionChange)="modelHasChanged()" [(value)]="agendaItem.memberName" name="selectedMember">
+                            <mat-option *ngFor="let member of clubMembersList" [value]="member.name">{{member.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <input matInput type="number" [(ngModel)]="agendaItem.durationSecondsGreen" placeholder="seconds" min="1" max="{{getGreenMaxValue(agendaItem)}}" (ngModelChange)="modelHasChanged()" name="durationGreen{{ndx}}"/>
+                    </mat-form-field></td>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <input matInput type="number" [(ngModel)]="agendaItem.durationSecondsAmber" placeholder="seconds" min="{{getAmberMinValue(agendaItem)}}" max="{{getAmberMaxValue(agendaItem)}}" (ngModelChange)="modelHasChanged()" name="durationAmber{{ndx}}"/>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <input matInput type="number" [(ngModel)]="agendaItem.durationSecondsRed" placeholder="seconds" min="{{getRedMinValue(agendaItem)}}" (ngModelChange)="modelHasChanged()" name="durationRed{{ndx}}"/>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <button mat-raised-button class="drag-handle" cdkDragHandle color="accent" class="handle-btn" matTooltip="Reorder item">
+                        <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                        </svg>
+                    </button>
+                </td>
+                <td>
+                    <button mat-raised-button (click)="removeMeetingAgendaItem(agendaItem.id)" color="accent" class="close-btn" matTooltip="Remove item">
+                        X
+                    </button>
+                </td>
+            </tr>            
+        </tbody>
+
+    </table>
+</form>

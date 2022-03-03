@@ -1,0 +1,32 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">
+          menu
+      </mat-icon>
+      <mat-icon *ngIf="sidenav.opened">
+          close
+      </mat-icon>
+  </button>
+  Cinnamon - Toastmasters Meeting Agenda Generator
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav">
+      <button mat-button class="menu-button" [routerLink]="'/home'" (click)="sidenav.toggle()">
+          <mat-icon>home</mat-icon>&nbsp;
+          <span>Home</span>
+      </button>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button" [routerLink]="'/about'" (click)="sidenav.toggle()">
+          <mat-icon>help</mat-icon>&nbsp;
+          <span>About</span>
+      </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
