@@ -1,0 +1,31 @@
+name: angular-run-tests
+
+on:
+  push:
+    branches:
+      - '**'
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./src
+
+jobs:
+    run-tests:
+      runs-on: ubuntu-latest
+
+      steps:
+       # Makes source code accessible via $github.workspace
+       - name: 'Checking out source code ...'
+         uses: actions/checkout@v2
+      
+       - name: 'Install node'
+         uses: actions/setup-node@v1
+         with:
+          node-version: 16
+
+       - name: 'Fetching dependencies'
+         run: npm ci
+
+       - name: 'Run tests'
+         run: npm test -- --watch=false --browsers=ChromeHeadless
