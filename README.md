@@ -2,10 +2,7 @@
 ![Banner](/docs/git-repo-banner.png?raw=true "")
 
 ## Overview
-Cinnamon is a self-contained Angular SPA web application for generating Toastmasters Meeting Agendas.
-<br /> <br />
-
-The application can be accessed here:
+Cinnamon is a self-contained Angular SPA web application for generating Toastmasters Meeting Agendas. <br />
 https://sbartholomeusz.github.io/cinnamon/
 <br /> <br />
 
