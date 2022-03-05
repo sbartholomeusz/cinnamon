@@ -5,6 +5,10 @@
 Cinnamon is a self-contained Angular SPA web application for generating Toastmasters Meeting Agendas.
 <br /> <br />
 
+The application can be accessed here:
+https://sbartholomeusz.github.io/cinnamon/
+<br /> <br />
+
 The application was developed with the following constraints in mind:
 * Toastmasters International does not provide official tools to generate club meeting agendas (at least at the time of development).
 * The solution must be easy to access, and therefore ideally web based.
