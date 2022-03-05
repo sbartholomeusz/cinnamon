@@ -3,19 +3,27 @@
 
 ## Overview
 Cinnamon is a self-contained Angular SPA web application for generating Toastmasters Meeting Agendas.
-<br /> 
+<br /> <br />
 
 The application was developed with the following constraints in mind:
 * Toastmasters International does not provide official tools to generate club meeting agendas (at least at the time of development).
 * The solution must be easy to access, and therefore ideally web based.
 * Toastmasters Clubs are run by volunteers therefore minimising the complexity and on-going maintenance of the application is vital. A self-contained solution would be the most ideal option.
 * Hosting costs for the web application should also be minimised.
-<br /> 
+<br /> <br />
 
 Notable third party dependencies include:
 * print-js - https://www.npmjs.com/package/print-js
 * awesome-qr - https://www.npmjs.com/package/awesome-qr
 <br /> <br /> 
+
+![Banner](/docs/app-screenshot-1.png?raw=true "")
+
+![Banner](/docs/app-screenshot-2.png?raw=true "")
+
+![Banner](/docs/app-screenshot-3.png?raw=true "")
+
+<br />
 
 ## Configurations
 Please take note of the following configuration files that will require amending.
