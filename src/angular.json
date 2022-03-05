@@ -23,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["awesome-qr"],
             "outputPath": "dist/cinnamon",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -108,6 +109,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
