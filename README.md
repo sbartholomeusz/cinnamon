@@ -1,4 +1,6 @@
-# Cinnamon
+# Cinnamon - Toastmasters Meeting Agenda Generator
+[![GitHub Action status](https://github.com/sbartholomeusz/cinnamon/workflows/ci-cd/badge.svg)](https://github.com/sbartholomeusz/cinnamon/actions)
+
 ![Banner](/docs/git-repo-banner.png?raw=true "")
 
 ## Overview
@@ -16,6 +18,7 @@ The application was developed with the following constraints in mind:
 Notable third party dependencies include:
 * print-js - https://www.npmjs.com/package/print-js
 * awesome-qr - https://www.npmjs.com/package/awesome-qr
+* angular-cli-ghpages - https://www.npmjs.com/package/angular-cli-ghpages
 <br /> <br /> 
 
 ![Banner](/docs/app-screenshot-1.png?raw=true "")
