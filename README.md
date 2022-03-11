@@ -16,9 +16,10 @@ The application was developed with the following constraints in mind:
 <br /> <br />
 
 Notable third party dependencies include:
-* print-js - https://www.npmjs.com/package/print-js
 * awesome-qr - https://www.npmjs.com/package/awesome-qr
 * angular-cli-ghpages - https://www.npmjs.com/package/angular-cli-ghpages
+* datetime-picker - https://www.npmjs.com/package/@angular-material-components/datetime-picker
+* print-js - https://www.npmjs.com/package/print-js
 <br /> <br /> 
 
 ![Banner](/docs/app-screenshot-1.png?raw=true "")
