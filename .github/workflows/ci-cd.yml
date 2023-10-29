@@ -22,7 +22,7 @@ jobs:
       uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@feature/add-npm-workflows
       with:
         node_version: '16'
-        path: 'src'
+        path: './src'
         os_platform: 'ubuntu-latest'
 
     deploy:
