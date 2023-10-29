@@ -1,6 +1,14 @@
 name: ci-cd
 
 on:
+  # Run workflow manually
+  workflow_dispatch:
+
+  # PR for specific branches
+  pull_request:
+    branches: [main]
+  
+  # pushes to specific branches
   push:
     branches: [main]
 
