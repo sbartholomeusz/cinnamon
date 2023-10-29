@@ -1,6 +1,10 @@
-name: ci-cd
+name: deploy
 
 on:
+  # Run workflow manually
+  workflow_dispatch:
+  
+  # pushes to specific branches
   push:
     branches: [main]
 
@@ -11,36 +15,21 @@ defaults:
 
 jobs:
     test:
-      runs-on: ubuntu-latest
-      steps:
-       # Makes source code accessible via $github.workspace
-       - name: 'Check out source code'
-         uses: actions/checkout@v2
-      
-       - name: 'Install node'
-         uses: actions/setup-node@v1
-         with:
-          node-version: 16
-
-       - name: 'Fetch dependencies'
-         run: npm ci
-
-       - name: 'Build'
-         run: npm run build
-
-       - name: 'Test'
-         run: npm test -- --watch=false --browsers=ChromeHeadless
+      uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@feature/add-npm-workflows
+      with:
+        node_version: '16'
+        path: './src'
+        os_platform: 'ubuntu-latest'
 
     deploy:
       needs: [test]
       runs-on: ubuntu-latest
       steps:
-       # Makes source code accessible via $github.workspace
        - name: 'Check out source code'
-         uses: actions/checkout@v2
+         uses: actions/checkout@v4
       
        - name: 'Install node'
-         uses: actions/setup-node@v1
+         uses: actions/setup-node@v3
          with:
           node-version: 16
 
