@@ -11,14 +11,11 @@ defaults:
 
 jobs:
     test:
-      runs-on: ubuntu-latest
-      steps:
-       - name: 'Run tests'
-         uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@feature/add-npm-workflows
-         with:
-           node_version: '16'
-           path: 'src'
-           os_platform: 'ubuntu-latest'
+      uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@feature/add-npm-workflows
+      with:
+        node_version: '16'
+        path: 'src'
+        os_platform: 'ubuntu-latest'
 
     deploy:
       needs: [test]
