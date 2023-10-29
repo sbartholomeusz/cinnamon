@@ -1,0 +1,21 @@
+name: test
+
+on:
+  # Run workflow manually
+  workflow_dispatch:
+
+  # PR for any branch
+  pull_request:
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./src
+
+jobs:
+    test:
+      uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@feature/add-npm-workflows
+      with:
+        node_version: '16'
+        path: './src'
+        os_platform: 'ubuntu-latest'
