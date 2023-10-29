@@ -6,11 +6,11 @@ on:
 
   # PR for specific branches
   pull_request:
-    branches: [main]
+    branches: [main, feature/use-common-gh-actions]
   
   # pushes to specific branches
   push:
-    branches: [main]
+    branches: [main, feature/use-common-gh-actions]
 
 defaults:
   run:
