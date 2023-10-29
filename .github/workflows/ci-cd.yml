@@ -13,43 +13,31 @@ jobs:
     test:
       runs-on: ubuntu-latest
       steps:
-       # Makes source code accessible via $github.workspace
-       - name: 'Check out source code'
-         uses: actions/checkout@v2
-      
-       - name: 'Install node'
-         uses: actions/setup-node@v1
+       - name: 'Run tests'
+         uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@feature/add-npm-workflows
          with:
-          node-version: 16
-
-       - name: 'Fetch dependencies'
-         run: npm ci
-
-       - name: 'Build'
-         run: npm run build
-
-       - name: 'Test'
-         run: npm test -- --watch=false --browsers=ChromeHeadless
+           node_version: '16'
+           path: 'src'
+           os_platform: 'ubuntu-latest'
 
     deploy:
       needs: [test]
       runs-on: ubuntu-latest
       steps:
-       # Makes source code accessible via $github.workspace
        - name: 'Check out source code'
-         uses: actions/checkout@v2
+         uses: actions/checkout@v4
       
        - name: 'Install node'
-         uses: actions/setup-node@v1
+         uses: actions/setup-node@v3
          with:
           node-version: 16
 
        - name: 'Fetch dependencies'
          run: npm ci
 
-       - name: 'Deploy to Github Pages'
-         run: |
-           git config --global user.email "${{ secrets.GIT_PROFILE_EMAIL }}"
-           git config --global user.name "${{ secrets.GIT_PROFILE_NAME }}"
-           git remote set-url origin https://${{ secrets.ACCESS_TOKEN_GITHUB }}@github.com/${{ github.repository }}
-           npm run deploy
+      #  - name: 'Deploy to Github Pages'
+      #    run: |
+      #      git config --global user.email "${{ secrets.GIT_PROFILE_EMAIL }}"
+      #      git config --global user.name "${{ secrets.GIT_PROFILE_NAME }}"
+      #      git remote set-url origin https://${{ secrets.ACCESS_TOKEN_GITHUB }}@github.com/${{ github.repository }}
+      #      npm run deploy
