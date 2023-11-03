@@ -37,7 +37,7 @@ jobs:
          run: npm ci
 
        - name: 'Build'
-         run: ng deploy --base-href=/cinnamon/ --no-silent
+         run: npm run build
 
        - name: Upload build artifact
          uses: actions/upload-pages-artifact@v2
