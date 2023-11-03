@@ -47,6 +47,10 @@ jobs:
     deploy:
       needs: [build]
       runs-on: ubuntu-latest
+      # Grant required permissions for GITHUB_TOKEN
+      permissions:
+        pages: write      # deploy to GH Pages
+        id-token: write   # verify the deployment originates from an appropriate source
       steps:
         - name: Deploy to build to GitHub Pages
           id: deployment
