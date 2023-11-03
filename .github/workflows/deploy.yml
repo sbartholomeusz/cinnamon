@@ -42,7 +42,7 @@ jobs:
        - name: Upload build artifact
          uses: actions/upload-pages-artifact@v2
          with:
-           path: ./dist/cinnamon
+           path: ./src/dist/cinnamon
 
     deploy:
       needs: [build]
