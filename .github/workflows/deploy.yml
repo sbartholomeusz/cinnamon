@@ -32,6 +32,9 @@ jobs:
       steps:
        - name: 'Check out source code'
          uses: actions/checkout@v4
+
+       - name: 'Setup GH Pages'
+         uses: actions/configure-pages@v3
       
        - name: 'Install node'
          uses: actions/setup-node@v3
