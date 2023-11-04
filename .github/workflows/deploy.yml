@@ -51,6 +51,10 @@ jobs:
       permissions:
         pages: write      # deploy to GH Pages
         id-token: write   # verify the deployment originates from an appropriate source
+      # Deploy to the github-pages environment
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
       steps:
         - name: Deploy to build to GitHub Pages
           id: deployment
