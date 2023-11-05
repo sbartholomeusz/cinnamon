@@ -4,8 +4,7 @@ on:
   # Run workflow manually
   workflow_dispatch:
 
-  # PR for any branch
-  pull_request:
+  push:
 
 defaults:
   run:
