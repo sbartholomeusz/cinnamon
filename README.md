@@ -1,6 +1,5 @@
 # Cinnamon - Toastmasters Meeting Agenda Generator
 [![GitHub Action status](https://github.com/sbartholomeusz/cinnamon/workflows/test/badge.svg)](https://github.com/sbartholomeusz/cinnamon/actions)
-
 [![GitHub Action status](https://github.com/sbartholomeusz/cinnamon/workflows/deploy/badge.svg)](https://github.com/sbartholomeusz/cinnamon/actions)
 
 ![Banner](/docs/git-repo-banner.png?raw=true "")
