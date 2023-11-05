@@ -1,3 +1,7 @@
+#
+# Purpose: Run tests and automated code quality checks
+#
+
 name: test
 
 on:
@@ -16,5 +20,11 @@ jobs:
       uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@v1
       with:
         node_version: '16'
+        path: './src'
+        os_platform: 'ubuntu-latest'
+
+    code-ql:
+      uses: sbartholomeusz/gh-actions-common/.github/workflows/typescript-code-ql.yml@v1
+      with:
         path: './src'
         os_platform: 'ubuntu-latest'
