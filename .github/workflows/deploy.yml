@@ -26,7 +26,7 @@ defaults:
 
 jobs:
     test:
-      uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@feature/add-npm-workflows
+      uses: sbartholomeusz/gh-actions-common/.github/workflows/npm-test.yml@v1
       with:
         node_version: '16'
         path: './src'
