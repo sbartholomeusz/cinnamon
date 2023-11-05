@@ -24,7 +24,7 @@ jobs:
         os_platform: 'ubuntu-latest'
 
     code-ql:
-      uses: sbartholomeusz/gh-actions-common/.github/workflows/typescript-code-ql.yml@feature/typescript-code-ql
+      uses: sbartholomeusz/gh-actions-common/.github/workflows/typescript-code-ql.yml@v1
       with:
         path: './src'
         os_platform: 'ubuntu-latest'
