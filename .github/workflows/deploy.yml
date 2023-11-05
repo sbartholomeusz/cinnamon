@@ -51,7 +51,7 @@ jobs:
          run: npm ci
 
        - name: 'Build'
-         run: npm run deploy
+         run: npm run build-gh-pages
 
        - name: Upload build artifact
          uses: actions/upload-pages-artifact@v2
