@@ -1,3 +1,7 @@
+#
+# Purpose: Deploy app to GitHub Pages
+#
+
 name: deploy
 
 on:
